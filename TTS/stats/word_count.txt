@@ -1,11 +1,14 @@
 you,7
 hello,4
+test,4
 zack,3
 what,3
 did,3
 do,3
+foo,3
 are,2
 the,2
+c,2
 how,1
 oh,1
 that,1
@@ -28,6 +31,6 @@ best,1
 okay,1
 see,1
 later,1
-test,1
 baz,1
-foo,1
+python,1
+java,1
