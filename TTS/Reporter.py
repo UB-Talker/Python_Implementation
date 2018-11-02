@@ -2,7 +2,10 @@ from datetime import datetime
 
 
 def formatted_timestamp():
-    return str(datetime.now()).replace(' ', '_').split('.').pop(0)
+    timestamp = str(datetime.now()).replace(' ', '_').split('.').pop(0)
+    timestamp = timestamp.replace(':', 'h', 1)
+    timestamp = timestamp.replace(':', 'm') + 's'
+    return timestamp
 
 
 def conversation_parse_filter(c):
