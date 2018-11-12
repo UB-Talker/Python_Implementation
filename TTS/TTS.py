@@ -1,22 +1,30 @@
 from gtts import gTTS
-import pyttsx3
+from gtts.tts import gTTSError
+from ttslib import tts as local_tts
 from pygame import mixer
 from io import BytesIO
+import socket
 
-engine = pyttsx3.init()
 mixer.init()
 
 
-def speak(text, lang='en'):
-
+def internet_connected():
     try:
-        tts = gTTS(text=text, lang=lang)
+        socket.gethostbyname('www.google.com')
+        return True
+    except socket.gaierror:
+        return False
+
+
+def speak(text, lang='en'):
+    try:
+        gtts = gTTS(text=text, lang=lang)
         sf = BytesIO()
-        tts.write_to_fp(sf)
+        gtts.write_to_fp(sf)
         sf.seek(0)
         mixer.music.load(sf)
         mixer.music.play()
-    except:
-        engine.say(text)
-        engine.runAndWait()
+    except gTTSError:
+        local_tts(text, 'en')
     pass
+

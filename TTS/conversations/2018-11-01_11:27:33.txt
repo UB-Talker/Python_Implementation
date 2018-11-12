@@ -1,7 +1,0 @@
-2018-11-01_11:27:40	hello
-2018-11-01_11:27:46	how are you?
-2018-11-01_11:27:57	oh that truly is wonderful
-2018-11-01_11:28:10	are you going to the store with ma
-2018-11-01_11:28:19	can you get me some cookies?
-2018-11-01_11:28:32	thanks! you're the best!
-2018-11-01_11:28:40	okay see you later
