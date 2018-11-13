@@ -1,4 +1,7 @@
 from datetime import datetime
+from json import loads, dumps
+
+word_count = {}
 
 
 def formatted_timestamp():
@@ -29,21 +32,17 @@ def init_private_vars():
 
 def init_word_count():
     global word_count
-    word_count = {}
     try:
         stats = open('TTS/stats/word_count.txt', 'r')
-        for line in stats:
-            item = line.split(',')
-            count = int(item.pop())
-            word = item.pop()
-            word_count[word] = count
+        word_count = loads(stats.read())
         stats.close()
     except FileNotFoundError:
-        print('No word_count file found')
+        word_count = {}
     pass
 
 
 def update_word_count():
+    global word_count
     report_ref = open(report_name, 'r')
     for line in report_ref:
         line = line.split('\t').pop()
@@ -56,9 +55,9 @@ def update_word_count():
 
 
 def save_word_count():
+    global word_count
     stats = open('TTS/stats/word_count.txt', 'w')
-    for word, count in sorted(word_count.items(), key=word_count_comparator, reverse=True):
-        stats.write(word + ',' + str(count) + '\n')
+    stats.write(dumps(word_count))
     stats.close()
     pass
 

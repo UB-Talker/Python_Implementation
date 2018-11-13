@@ -1,10 +1,1 @@
-test,6
-bar,6
-baz,5
-java,5
-idk,5
-hey,4
-hello,4
-c,3
-foo,3
-python,2
+{"test": 4, "foo": 3, "baz": 1, "java": 1, "hello": 2, "hey": 7, "c": 1, "bar": 2, "sample": 20}

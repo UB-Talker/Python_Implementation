@@ -5,8 +5,6 @@ from pygame import mixer
 from io import BytesIO
 import socket
 
-mixer.init()
-
 
 def internet_connected():
     try:
@@ -28,3 +26,5 @@ def speak(text, lang='en'):
         local_tts(text, 'en')
     pass
 
+
+mixer.init()
