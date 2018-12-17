@@ -1,1 +1,1 @@
-{"Sample": "Speak", "Quit": "Quit"}
+{"Add a new button": "Add", "Sample": "Speak", "Quit": "Quit", "Hello": "Speak", "World!": "Speak"}

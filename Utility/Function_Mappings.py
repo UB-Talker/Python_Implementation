@@ -1,4 +1,4 @@
-function_map = {'Speak': None, 'Quit': None, 'Folder': None}
+function_map = {'Speak': None, 'Quit': None, 'Folder': None, 'Add':None}
 
 
 def set_mapping(key, f):
