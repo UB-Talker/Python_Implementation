@@ -1,1 +1,1 @@
-{"Add a new button": "Add", "Sample": "Speak", "Quit": "Quit", "Hello": "Speak", "World!": "Speak"}
+{"Home": {"Add a new button": "Add", "Sample": "Speak", "Hello": "Speak", "World!": "Speak", "How are you?": "Speak", "Breakfast": "Folder"}, "Breakfast": {"Add a new button to\n the Breakfast folder": "Add", "Eggs": "Speak", "Cereal": "Folder"}, "Cereal": {"Add a new button to\n the Cereal folder": "Add", "Fruit Loops": "Speak", "Corn Flakes": "Speak"}}
